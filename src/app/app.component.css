@@ -1,0 +1,12 @@
+nav a.active {
+  color: lightseagreen;
+}
+nav a:hover {
+  color: lightblue;
+}
+nav a {
+  color: black;
+}
+nav a.visited {
+  color: black;
+}

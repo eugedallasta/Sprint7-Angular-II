@@ -1,0 +1,55 @@
+<div class="container p-4 mb-3 formulario animacion">
+  <form>
+    <div class="mb-3 row">
+      <label for="paginas" class="col-md-6 col-form-label"
+        >Número de páginas</label
+      >
+      <app-input
+        class="col-md-5 col-sm-9"
+        id="paginas"
+        [nombre]="message1"
+      ></app-input>
+      <button
+        class="col-md-1 col-sm-3 btn d-flex align-items-center"
+        type="button"
+        (click)="abrirModal(paginas)"
+      >
+        <i class="bi bi-info-circle-fill"></i>
+      </button>
+    </div>
+    <div class="row">
+      <label for="idiomas" class="col-md-6 col-form-label"
+        >Número de idiomas</label
+      >
+
+      <app-input
+        class="col-md-5 col-sm-9"
+        id="idiomas"
+        [nombre]="message2"
+      ></app-input>
+      <button
+        class="col-md-1 col-sm-3 btn d-flex align-items-center"
+        type="button"
+        (click)="abrirModal(idiomas)"
+      >
+        <i class="bi bi-info-circle-fill"></i>
+      </button>
+    </div>
+  </form>
+
+  <!-- Información Explicativa a las casillas de paginas e idiomas -->
+
+  <ng-template #paginas let-modal>
+    <div class="modal-body">
+      En este componente debe indicar el número de páginas que tendrá su sitio
+      web
+    </div>
+  </ng-template>
+
+  <ng-template #idiomas let-modal>
+    <div class="modal-body">
+      En este componente debe indicar el número de idiomas que tendrá su sitio
+      web
+    </div>
+  </ng-template>
+</div>

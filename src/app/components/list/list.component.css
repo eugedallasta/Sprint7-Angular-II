@@ -1,0 +1,18 @@
+.listado {
+  list-style: none;
+}
+.marco {
+  border: 1px solid black;
+  padding: 10px;
+}
+button.texto {
+  font-size: 0.7em;
+  font-weight: bold;
+  width: 30%;
+  min-width: fit-content;
+  margin-right: 1em;
+}
+button.active {
+  background-color: hsl(262, 82%, 89%);
+  border: 1px sold purple;
+}

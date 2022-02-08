@@ -1,0 +1,49 @@
+.casilla {
+  width: 40%;
+  border: none;
+  min-width: 3em;
+}
+.casilla:hover {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+button {
+  background-color: grey;
+  font-size: 1.2em;
+  font-weight: 900;
+  color: white;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 5px;
+  border: none;
+  cursor: default;
+}
+button:active {
+  background-color: orchid;
+}
+button:disabled {
+  background-color: gray;
+}
+.label {
+  align-content: space-between;
+  min-width: fit-content;
+}
+.error {
+  color: red;
+  font-size: 12px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.special {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+.special:hover {
+  border: 2px solid red;
+  border-radius: 5px;
+}

@@ -1,0 +1,15 @@
+.parrafo {
+  padding-top: 45vh;
+  padding-bottom: 25vh;
+}
+p {
+  font-weight: bold;
+}
+.landing{
+   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('../../../assets/landing.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+
+}

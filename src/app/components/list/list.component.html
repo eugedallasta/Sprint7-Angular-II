@@ -1,0 +1,75 @@
+<div class="cointainer-fluid">
+  <!-- Ordenar el listado de presupuestos -->
+
+  <div class="container d-flex justify-content-center m-2">
+    <button
+      class="btn btn-small btn-dark m-2 texto"
+      (click)="alfabetico()"
+      [class.active]="alfabeto"
+    >
+      Ordenar <br />
+      Alfabéticamente
+    </button>
+    <button
+      class="btn btn-small btn-dark m-2 texto"
+      (click)="porData()"
+      [class.active]="pordata"
+    >
+      Ordenar por <br />
+      Fecha
+    </button>
+    <button
+      class="btn btn-small btn-dark m-2 texto"
+      (click)="incial()"
+      [class.active]="origin"
+    >
+      Orden <br />
+      Inicial
+    </button>
+  </div>
+
+  <!-- Botones para ordenar el listado -->
+
+  <div class="cointainer m-5">
+    <label for="buscar" class="col mb-2"
+      >Buscar por nombre cliente:</label
+    >
+    <input id="buscar" class="col-md-8" type="text" [formControl]="buscar" />
+    <!--(click)="comparar(busca) -->
+    <button
+      class="btn btn-dark btn-sm col-md-3 m-2 mt-1"
+      type="submit"
+      [disabled]="buscar.invalid"
+      (click)="comparar(busca)"
+    >
+      Buscar
+    </button>
+    <div *ngIf="buscar.errors?.['minlength'] || buscar.errors?.['maxlength'] ">
+      El nombre puede contener entre 2 y 20 caracteres
+    </div>
+  </div>
+
+  <!-- Mostrar el listado por pantalla -->
+
+  <div class="cointainer">
+    <ul>
+      <li *ngFor="let presupuesto of presupuestos" class="listado marco mb-2">
+        <span>Nombre Cliente: {{ presupuesto.nombre }}</span>
+        <br />
+        <span>Nombre Presupuesto: {{ presupuesto.nombrePresupuesto }}</span>
+        <br />
+        <span>Servicios Contratados:</span>
+        <ul class="mt-2">
+          <li *ngFor="let servicio of presupuesto.servicios" class="listado">
+            <span>{{ servicio }}</span>
+          </li>
+        </ul>
+
+        <br />
+        <span>Precio: {{ presupuesto.precio }} €</span>
+        <br />
+        <span>Fecha: {{ presupuesto.data }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
