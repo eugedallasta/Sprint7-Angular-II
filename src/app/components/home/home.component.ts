@@ -127,4 +127,7 @@ export class HomeComponent implements OnInit {
     this.service.nuevoPresupuesto(nuevo);
     this.presupuestos = this.service.presupuestos;
   }
+  clear() {
+    this.panell = false;
+  }
 }
